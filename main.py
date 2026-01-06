@@ -135,5 +135,7 @@ def main_page():
         info_blocks()
         footer()
     # user_connected()
+import os
+port = int(os.getenv('PORT', 8080))
+ui.run(title=APP_NAME, port=port, host='0.0.0.0')
 
-ui.run(title=APP_NAME, port=8080)
